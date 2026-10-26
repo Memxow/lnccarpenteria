@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Link alla sitemap ufficiale
+Sitemap: https://memxow.github.io/lnccarpenteria/sitemap.xml

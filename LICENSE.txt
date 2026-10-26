@@ -1,0 +1,4 @@
+Copyright (c) 2026 LNC SNC di A. Africano & C. Tutti i diritti riservati.
+
+Questo codice sorgente e i relativi file grafici e di contenuto sono di proprietà esclusiva di LNC SNC di A. Africano & C. 
+È severamente vietata la copia, la modifica, la redistribuzione o il riutilizzo non autorizzato di qualsiasi parte del codice e delle immagini presenti in questo progetto senza previa autorizzazione scritta.
