@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    
+    <!-- Home Page -->
+    <url>
+        <loc>https://memxow.github.io/lnccarpenteria/index.html</loc>
+        <lastmod>2026-06-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Pagina Servizi -->
+    <url>
+        <loc>https://memxow.github.io/lnccarpenteria/services.html</loc>
+        <lastmod>2026-06-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Pagina Chi Siamo-->
+    <url>
+        <loc>https://memxow.github.io/lnccarpenteria/about.html</loc>
+        <lastmod>2026-06-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Pagina Contatti -->
+    <url>
+        <loc>https://memxow.github.io/lnccarpenteria/contacts.html</loc>
+        <lastmod>2026-06-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+</urlset>
