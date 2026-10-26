@@ -157,3 +157,8 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
+/* Righe di codice per farsì che la data si aggiorni in modo automatico */
+const year = new Date().getFullYear();
+
+document.getElementById("current-year").textContent = year;
