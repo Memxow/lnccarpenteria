@@ -120,3 +120,25 @@ body {
     transform: translateY(-4px);
     transition: all 0.5s ease;
 }
+
+/* Posizionamento corretto della tendina sotto il pulsante della lingua */
+.navbar .dropdown-menu,
+.offcanvas .dropdown-menu {
+    position: absolute !important;
+    top: 100% !important;        /* Forzato ad aprirsi subito sotto il pulsante */
+    left: 0 !important;         /* Allineato a sinistra del pulsante */
+    right: auto !important;     /* Disattiva lo spostamento a destra */
+    margin-top: 0.25rem;        /* Piccolo spazio di distacco dal pulsante */
+    min-width: 150px;           /* Garanzia di larghezza costante per evitare deformazioni */
+}
+
+/* Assicura che le bandiere siano sempre visibili e ben proporzionate */
+.fi {
+    display: inline-block;
+    width: 1.3em;
+    height: 1em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+}
