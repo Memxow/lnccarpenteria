@@ -1,52 +1,75 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    
+    <url>
+        <loc>https://memxow.github.io/lnccarpenteria/en/</loc>
+        <lastmod>2026-10-27</lastmod>
+        <priority>1.0000</priority>
+    </url>
 
-    <!-- Home Page -->
     <url>
         <loc>https://memxow.github.io/lnccarpenteria/</loc>
-        <lastmod>2026-06-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
+        <lastmod>2026-10-27</lastmod>
+        <priority>1.0000</priority>
     </url>
 
-    <!-- Pagina Servizi -->
     <url>
         <loc>https://memxow.github.io/lnccarpenteria/services.html</loc>
-        <lastmod>2026-06-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <lastmod>2026-10-27</lastmod>
+        <priority>0.8000</priority>
     </url>
 
-    <!-- Pagina Chi Siamo -->
+    <url>
+        <loc>https://memxow.github.io/lnccarpenteria/en/services.html</loc>
+        <lastmod>2026-10-27</lastmod>
+        <priority>0.8000</priority>
+    </url>
+
     <url>
         <loc>https://memxow.github.io/lnccarpenteria/about.html</loc>
-        <lastmod>2026-06-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <lastmod>2026-10-27</lastmod>
+        <priority>0.8000</priority>
     </url>
 
-    <!-- Pagina Contatti -->
+    <url>
+        <loc>https://memxow.github.io/lnccarpenteria/en/about.html</loc>
+        <lastmod>2026-10-27</lastmod>
+        <priority>0.8000</priority>
+    </url>
+
     <url>
         <loc>https://memxow.github.io/lnccarpenteria/contacts.html</loc>
-        <lastmod>2026-06-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <lastmod>2026-10-27</lastmod>
+        <priority>0.8000</priority>
     </url>
 
-    <!-- Privacy Policy -->
+    <url>
+        <loc>https://memxow.github.io/lnccarpenteria/en/contacts.html</loc>
+        <lastmod>2026-10-27</lastmod>
+        <priority>0.8000</priority>
+    </url>
+
     <url>
         <loc>https://memxow.github.io/lnccarpenteria/privacy.html</loc>
-        <lastmod>2026-06-01</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.3</priority>
+        <lastmod>2026-10-27</lastmod>
+        <priority>0.3000</priority>
     </url>
 
-    <!-- Cookie Policy -->
+    <url>
+        <loc>https://memxow.github.io/lnccarpenteria/en/privacy.html</loc>
+        <lastmod>2026-10-27</lastmod>
+        <priority>0.3000</priority>
+    </url>
+
     <url>
         <loc>https://memxow.github.io/lnccarpenteria/cookie.html</loc>
-        <lastmod>2026-06-01</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.3</priority>
+        <lastmod>2026-10-27</lastmod>
+        <priority>0.3000</priority>
+    </url>
+
+    <url>
+        <loc>https://memxow.github.io/lnccarpenteria/en/cookie.html</loc>
+        <lastmod>2026-10-27</lastmod>
+        <priority>0.3000</priority>
     </url>
 
 </urlset>
