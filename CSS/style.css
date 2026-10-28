@@ -10,7 +10,7 @@ body {
     .hero-section {
         /* Overlay scuro  + percorso della tua immagine */
         background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-                    url('../images/taglioLaser-1.jpg') center/cover no-repeat;
+                    url('../images/MetalStructure.jpg') center/cover no-repeat;
         min-height: 80vh;
         display: flex;
         align-items: center;
