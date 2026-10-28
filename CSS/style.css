@@ -142,3 +142,7 @@ body {
     background-position: center;
     vertical-align: middle;
 }
+
+@view-transition {
+    naivigation: auto;
+}
