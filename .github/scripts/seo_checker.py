@@ -1,5 +1,6 @@
 import os
 import glob
+import signal
 import google.generativeai as genai
 
 api_key = os.environ.get("GEMINI_API_KEY")
@@ -8,10 +9,18 @@ if not api_key:
 
 genai.configure(api_key=api_key)
 
-# Usiamo direttamente il modello esatto richiesto dai server di Google
-model_name = 'gemini-3.8-flash'
+model_name = 'gemini-1.5-flash'
 print(f"Utilizzo del modello: {model_name}")
 model = genai.GenerativeModel(model_name)
+
+# Gestione del timeout per evitare blocchi infiniti su GitHub Actions (Linux)
+class TimeoutException(Exception):
+    pass
+
+def timeout_handler(signum, frame):
+    raise TimeoutException("Timeout della richiesta API")
+
+signal.signal(signal.SIGALRM, timeout_handler)
 
 html_files = glob.glob("**/*.html", recursive=True)
 report = []
@@ -31,17 +40,25 @@ for file_path in html_files:
     {content[:3500]}
 
     Fornisci un'analisi strutturata in italiano contenente:
-    1. **Meta Title Consigliato**: (max 60 caratteri, ottimali per keyword di settore).
+    1. **Meta Title Consigliato**: (max 60 caratteri, ottimizzato per keyword di settore).
     2. **Meta Description Consigliata**: (max 155 caratteri, persuasiva e ricca di keyword).
     3. **Keyword Strategiche Rilevate/Consigliate**: 3-5 parole chiave pertinenti per questa pagina.
     4. **3 Suggerimenti Pratici di Contenuto**: Suggerimenti specifici per migliorare il posizionamento Google del testo.
     """
 
     try:
+        # Imposta un limite massimo di 25 secondi per ogni file
+        signal.alarm(25)
         response = model.generate_content(prompt)
+        signal.alarm(0)  # Disattiva l'allarme se ha risposto in tempo
+        
         report.append(f"## 🤖 Analisi IA per `{file_path}`\n\n{response.text}\n\n---\n")
+    except TimeoutException:
+        signal.alarm(0)
+        report.append(f"## 🤖 Analisi IA per `{file_path}`\n\n*⚠️ Saltato per timeout (la risposta ha impiegato troppo tempo).* \n\n---\n")
     except Exception as e:
-        report.append(f"Errore durante l'analisi di {file_path}: {e}\n\n---\n")
+        signal.alarm(0)
+        report.append(f"## 🤖 Analisi IA per `{file_path}`\n\n*Errore durante l'analisi: {e}*\n\n---\n")
 
 with open("SEO_RECOMMENDATIONS.md", "w", encoding="utf-8") as f:
     f.write(f"# 📈 Report SEO con Suggerimenti IA\n\n*Modello utilizzato: {model_name}*\n\n" + "".join(report))
