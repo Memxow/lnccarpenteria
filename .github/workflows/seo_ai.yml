@@ -1,4 +1,4 @@
-name: SEO Checker
+name: SEO AI Analyzer
 
 on:
   push:
@@ -22,15 +22,17 @@ jobs:
           python-version: '3.10'
 
       - name: Installa librerie
-        run: pip install beautifulsoup4
+        run: pip install google-generativeai
 
-      - name: Esegui controllo SEO
+      - name: Esegui analisi SEO IA
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python .github/scripts/seo_checker.py
 
       - name: Salva report su GitHub
         run: |
-          git config --global user.name "SEO Bot"
+          git config --global user.name "SEO AI Bot"
           git config --global user.email "bot@github.com"
           git add SEO_RECOMMENDATIONS.md
-          git commit -m "docs: aggiornato report SEO automatico" || exit 0
+          git commit -m "docs: aggiornato report SEO con IA Gemini" || exit 0
           git push
