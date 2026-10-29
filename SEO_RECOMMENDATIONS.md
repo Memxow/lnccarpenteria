@@ -1,46 +1,74 @@
 # 📈 Report SEO con Suggerimenti IA
 
-*Modello utilizzato: models/gemini-2.5-flash*
+*Modello utilizzato: gemini-1.5-flash*
 
-Errore durante l'analisi di services.html: 404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).
+## 🤖 Analisi IA per `services.html`
 
----
-Errore durante l'analisi di contacts.html: 404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).
-
----
-Errore durante l'analisi di thankyou.html: 404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).
+*Errore durante l'analisi: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.*
 
 ---
-Errore durante l'analisi di cookie.html: 404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).
+## 🤖 Analisi IA per `contacts.html`
+
+*Errore durante l'analisi: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.*
 
 ---
-Errore durante l'analisi di privacy.html: 404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).
+## 🤖 Analisi IA per `thankyou.html`
+
+*Errore durante l'analisi: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.*
 
 ---
-Errore durante l'analisi di index.html: 404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).
+## 🤖 Analisi IA per `cookie.html`
+
+*Errore durante l'analisi: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.*
 
 ---
-Errore durante l'analisi di about.html: 404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).
+## 🤖 Analisi IA per `privacy.html`
+
+*Errore durante l'analisi: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.*
 
 ---
-Errore durante l'analisi di en/services.html: 404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).
+## 🤖 Analisi IA per `index.html`
+
+*Errore durante l'analisi: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.*
 
 ---
-Errore durante l'analisi di en/contacts.html: 404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).
+## 🤖 Analisi IA per `about.html`
+
+*Errore durante l'analisi: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.*
 
 ---
-Errore durante l'analisi di en/thankyou.html: 404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).
+## 🤖 Analisi IA per `en/services.html`
+
+*Errore durante l'analisi: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.*
 
 ---
-Errore durante l'analisi di en/cookie.html: 404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).
+## 🤖 Analisi IA per `en/contacts.html`
+
+*Errore durante l'analisi: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.*
 
 ---
-Errore durante l'analisi di en/privacy.html: 404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).
+## 🤖 Analisi IA per `en/thankyou.html`
+
+*Errore durante l'analisi: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.*
 
 ---
-Errore durante l'analisi di en/index.html: 404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).
+## 🤖 Analisi IA per `en/cookie.html`
+
+*Errore durante l'analisi: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.*
 
 ---
-Errore durante l'analisi di en/about.html: 404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).
+## 🤖 Analisi IA per `en/privacy.html`
+
+*Errore durante l'analisi: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.*
+
+---
+## 🤖 Analisi IA per `en/index.html`
+
+*Errore durante l'analisi: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.*
+
+---
+## 🤖 Analisi IA per `en/about.html`
+
+*Errore durante l'analisi: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.*
 
 ---
