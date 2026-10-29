@@ -4,7 +4,7 @@ import google.generativeai as genai
 
 #Configurazione API con la chiave salvata nei Secret di Github
 genai.configure(api_keys=os.environ.get("GEMINI_API_KEY"))
-model = genai.GenerativeModel('gemini-2.5-flash')
+model = genai.GenerativeModel('gemini-1.5-flash')
 
 html_files = glob.glob("**/*.html", recursive = True)
 report = []
