@@ -33,7 +33,7 @@
 
 --
 ## Analisi per `index.html`
-- Il `<title>` è troppo (65 caratteri). Consigliato: max 60.
+- Nessun problema SEO critico rilevato!
 
 --
 ## Analisi per `about.html`
