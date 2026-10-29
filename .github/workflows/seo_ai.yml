@@ -20,10 +20,10 @@ jobs:
       - name: Configura Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          python-version: '3.11'
 
       - name: Installa librerie
-        run: pip install google-generativeai
+        run: pip install google-genai
 
       - name: Esegui analisi SEO IA
         env:

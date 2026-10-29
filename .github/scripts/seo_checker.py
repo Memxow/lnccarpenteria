@@ -1,21 +1,21 @@
 import os
 import glob
-import google.generativeai as genai
+from google import genai
 
-#Configurazione API con la chiave salvata nei Secret di Github
+# Recupera la chiave API dai Secret
 api_key = os.environ.get("GEMINI_API_KEY")
 if not api_key:
-    raise ValueError("GEMINI_API_KEY non trovata nei Secreti di GitHub")
+    raise ValueError("GEMINI_API_KEY non trovata nei Secret di GitHub!")
 
-genai.configure(api_key=api_key)
-model = genai.GenerativeModel('gemini-1.5-flash')
+# Inizializza il client Gemini aggiornato
+client = genai.Client(api_key=api_key)
 
-html_files = glob.glob("**/*.html", recursive = True)
+html_files = glob.glob("**/*.html", recursive=True)
 report = []
 
 for file_path in html_files:
-    #Ignora file si sistema, componenti non usati e pagine di verifica
-    if "404.html" in file_path or "google" in file_path or "header.html" in file_path or "footer.html" in file_path:
+    # Ignora componenti e file non utili alla SEO di pagina
+    if any(x in file_path for x in ["404.html", "google", "header.html", "footer.html"]):
         continue
 
     with open(file_path, "r", encoding="utf-8") as f:
@@ -35,12 +35,15 @@ for file_path in html_files:
     """
 
     try:
-        response = model.generate_content(prompt)
-        report.append(f'## Analisi IA per `{file_path}`\n\n{response.text}\n\n--\n')
+        response = client.models.generate_content(
+            model='gemini-2.5-flash',
+            contents=prompt
+        )
+        report.append(f"## 🤖 Analisi IA per `{file_path}`\n\n{response.text}\n\n---\n")
     except Exception as e:
-        report.append(f"Errore durante l'analisi di {file_path}: {e}\n\n--\n")
+        report.append(f"Errore durante l'analisi di {file_path}: {e}\n\n---\n")
 
 with open("SEO_RECOMMENDATIONS.md", "w", encoding="utf-8") as f:
-    f.write("# Analisi SEO con suggerimenti IA (Gemini)\n\n" + "".join(report))
+    f.write("# 📈 Report SEO con Suggerimenti IA (Gemini)\n\n" + "".join(report))
 
-print("Analisi SEO AI completata con successo!")
+print("Analisi SEO IA completata con successo!")
