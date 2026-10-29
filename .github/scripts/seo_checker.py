@@ -1,14 +1,13 @@
 import os
 import glob
-from google import genai
+import google.generativeai as genai
 
-# Recupera la chiave API dai Secret
 api_key = os.environ.get("GEMINI_API_KEY")
 if not api_key:
     raise ValueError("GEMINI_API_KEY non trovata nei Secret di GitHub!")
 
-# Inizializza il client Gemini aggiornato
-client = genai.Client(api_key=api_key)
+genai.configure(api_key=api_key)
+model = genai.GenerativeModel('gemini-1.5-flash')
 
 html_files = glob.glob("**/*.html", recursive=True)
 report = []
@@ -35,10 +34,7 @@ for file_path in html_files:
     """
 
     try:
-        response = client.models.generate_content(
-            model='gemini-3.0-flash',
-            contents=prompt
-        )
+        response = model.generate_content(prompt)
         report.append(f"## 🤖 Analisi IA per `{file_path}`\n\n{response.text}\n\n---\n")
     except Exception as e:
         report.append(f"Errore durante l'analisi di {file_path}: {e}\n\n---\n")
