@@ -1,0 +1,36 @@
+name: SEO Checker
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  analyze-seo:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout codice
+        uses: actions/checkout@v3
+
+      - name: Configura Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Installa librerie
+        run: pip install beautifulsoup4
+
+      - name: Esegui controllo SEO
+        run: python .github/scripts/seo_checker.py
+
+      - name: Salva report su GitHub
+        run: |
+          git config --global user.name "SEO Bot"
+          git config --global user.email "bot@github.com"
+          git add SEO_RECOMMENDATIONS.md
+          git commit -m "docs: aggiornato report SEO automatico" || exit 0
+          git push
