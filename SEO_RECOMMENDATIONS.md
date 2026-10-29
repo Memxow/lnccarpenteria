@@ -3,11 +3,10 @@
 ## Analisi per `header.html`
 - Manca la `<meta name='description'>`.
 - Manca il tag `<h1>` nella pagina.
-- Immagini senza attributo `alt`: 3 trovate.
 
 --
 ## Analisi per `services.html`
-- Il `<title>` è troppo (61 caratteri). Consigliato: max 60.
+- Nessun problema SEO critico rilevato!
 
 --
 ## Analisi per `contacts.html`
@@ -17,11 +16,10 @@
 ## Analisi per `footer.html`
 - Manca la `<meta name='description'>`.
 - Manca il tag `<h1>` nella pagina.
-- Immagini senza attributo `alt`: 1 trovate.
 
 --
 ## Analisi per `thankyou.html`
-- Manca la `<meta name='description'>`.
+- Nessun problema SEO critico rilevato!
 
 --
 ## Analisi per `cookie.html`
