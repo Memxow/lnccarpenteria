@@ -35,4 +35,5 @@ jobs:
           git config --global user.email "bot@github.com"
           git add SEO_RECOMMENDATIONS.md
           git commit -m "docs: aggiornato report SEO con IA Gemini" || exit 0
+          git pull --rebase origin main
           git push
