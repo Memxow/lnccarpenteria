@@ -36,7 +36,7 @@ for file_path in html_files:
 
     try:
         response = client.models.generate_content(
-            model='gemini-2.5-flash',
+            model='gemini-2.0-flash',
             contents=prompt
         )
         report.append(f"## 🤖 Analisi IA per `{file_path}`\n\n{response.text}\n\n---\n")
