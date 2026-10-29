@@ -1,26 +1,36 @@
 import os
 import glob
-import signal
-import google.generativeai as genai
+from google import genai
 
 api_key = os.environ.get("GEMINI_API_KEY")
 if not api_key:
     raise ValueError("GEMINI_API_KEY non trovata nei Secret di GitHub!")
 
-genai.configure(api_key=api_key)
+# Inizializza il client con la libreria ufficiale moderna
+client = genai.Client(api_key=api_key)
 
-model_name = 'gemini-1.5-flash'
-print(f"Utilizzo del modello: {model_name}")
-model = genai.GenerativeModel(model_name)
+# Trova automaticamente un modello disponibile sul tuo account
+chosen_model = 'gemini-2.5-flash'  # Fallback di sicurezza
+try:
+    models = list(client.models.list())
+    print("Modelli disponibili rilevati:")
+    for m in models:
+        print(f" - {m.name}")
+        # Cerca un modello flash che supporti la generazione di contenuti
+        if hasattr(m, 'supported_generation_methods') and 'generateContent' in m.supported_generation_methods:
+            if 'flash' in m.name:
+                chosen_model = m.name.replace('models/', '')
+                break
+    # Se non trova 'flash', prende il primo disponibile
+    if chosen_model == 'gemini-2.5-flash':
+        for m in models:
+            if hasattr(m, 'supported_generation_methods') and 'generateContent' in m.supported_generation_methods:
+                chosen_model = m.name.replace('models/', '')
+                break
+except Exception as e:
+    print(f"Errore nella ricerca automatica: {e}")
 
-# Gestione del timeout per evitare blocchi infiniti su GitHub Actions (Linux)
-class TimeoutException(Exception):
-    pass
-
-def timeout_handler(signum, frame):
-    raise TimeoutException("Timeout della richiesta API")
-
-signal.signal(signal.SIGALRM, timeout_handler)
+print(f"-> Modello selezionato automaticamente: {chosen_model}")
 
 html_files = glob.glob("**/*.html", recursive=True)
 report = []
@@ -47,20 +57,15 @@ for file_path in html_files:
     """
 
     try:
-        # Imposta un limite massimo di 25 secondi per ogni file
-        signal.alarm(25)
-        response = model.generate_content(prompt)
-        signal.alarm(0)  # Disattiva l'allarme se ha risposto in tempo
-        
+        response = client.models.generate_content(
+            model=chosen_model,
+            contents=prompt
+        )
         report.append(f"## 🤖 Analisi IA per `{file_path}`\n\n{response.text}\n\n---\n")
-    except TimeoutException:
-        signal.alarm(0)
-        report.append(f"## 🤖 Analisi IA per `{file_path}`\n\n*⚠️ Saltato per timeout (la risposta ha impiegato troppo tempo).* \n\n---\n")
     except Exception as e:
-        signal.alarm(0)
         report.append(f"## 🤖 Analisi IA per `{file_path}`\n\n*Errore durante l'analisi: {e}*\n\n---\n")
 
 with open("SEO_RECOMMENDATIONS.md", "w", encoding="utf-8") as f:
-    f.write(f"# 📈 Report SEO con Suggerimenti IA\n\n*Modello utilizzato: {model_name}*\n\n" + "".join(report))
+    f.write(f"# 📈 Report SEO con Suggerimenti IA\n\n*Modello utilizzato automaticamente: {chosen_model}*\n\n" + "".join(report))
 
 print("Analisi SEO IA completata con successo!")
