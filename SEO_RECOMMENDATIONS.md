@@ -1,86 +1,44 @@
-# Report SEO Automatico (Controllo Strutturale)
+# Analisi SEO con suggerimenti IA (Gemini)
 
-## Analisi per `header.html`
-- Manca la `<meta name='description'>`.
-- Manca il tag `<h1>` nella pagina.
+Errore durante l'analisi di services.html: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.
 
 --
-## Analisi per `services.html`
-- Nessun problema SEO critico rilevato!
+Errore durante l'analisi di contacts.html: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.
 
 --
-## Analisi per `contacts.html`
-- Nessun problema SEO critico rilevato!
+Errore durante l'analisi di thankyou.html: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.
 
 --
-## Analisi per `footer.html`
-- Manca la `<meta name='description'>`.
-- Manca il tag `<h1>` nella pagina.
+Errore durante l'analisi di cookie.html: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.
 
 --
-## Analisi per `thankyou.html`
-- Nessun problema SEO critico rilevato!
+Errore durante l'analisi di privacy.html: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.
 
 --
-## Analisi per `cookie.html`
-- Nessun problema SEO critico rilevato!
+Errore durante l'analisi di index.html: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.
 
 --
-## Analisi per `privacy.html`
-- Nessun problema SEO critico rilevato!
+Errore durante l'analisi di about.html: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.
 
 --
-## Analisi per `index.html`
-- Nessun problema SEO critico rilevato!
+Errore durante l'analisi di en/services.html: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.
 
 --
-## Analisi per `about.html`
-- Nessun problema SEO critico rilevato!
+Errore durante l'analisi di en/contacts.html: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.
 
 --
-## Analisi per `googlee84ccc3eef256213.html`
-- Manca il tag `<title>` o è vuoto.
-- Manca la `<meta name='description'>`.
-- Manca il tag `<h1>` nella pagina.
+Errore durante l'analisi di en/thankyou.html: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.
 
 --
-## Analisi per `en/header.html`
-- Manca la `<meta name='description'>`.
-- Manca il tag `<h1>` nella pagina.
-- Immagini senza attributo `alt`: 3 trovate.
+Errore durante l'analisi di en/cookie.html: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.
 
 --
-## Analisi per `en/services.html`
-- Nessun problema SEO critico rilevato!
+Errore durante l'analisi di en/privacy.html: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.
 
 --
-## Analisi per `en/contacts.html`
-- Nessun problema SEO critico rilevato!
+Errore durante l'analisi di en/index.html: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.
 
 --
-## Analisi per `en/footer.html`
-- Manca la `<meta name='description'>`.
-- Manca il tag `<h1>` nella pagina.
-- Immagini senza attributo `alt`: 1 trovate.
-
---
-## Analisi per `en/thankyou.html`
-- Manca la `<meta name='description'>`.
-
---
-## Analisi per `en/cookie.html`
-- Nessun problema SEO critico rilevato!
-
---
-## Analisi per `en/privacy.html`
-- Nessun problema SEO critico rilevato!
-
---
-## Analisi per `en/index.html`
-- Nessun problema SEO critico rilevato!
-
---
-## Analisi per `en/about.html`
-- Nessun problema SEO critico rilevato!
+Errore durante l'analisi di en/about.html: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.
 
 --
