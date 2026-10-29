@@ -8,7 +8,7 @@ if not api_key:
     raise ValueError("GEMINI_API_KEY non trovata nei Secret di GitHub!")
 
 client = genai.Client(api_key=api_key)
-active_model = 'gemini-3.8-flash'
+active_model = 'gemini-3.5-flash-lite'
 
 # Selezioniamo SOLO le pagine strategiche per la SEO per evitare di esaurire la quota giornaliera
 target_pages = [
